@@ -1,4 +1,4 @@
-rule Mariachi_Malware_Detection
+rule Mariachi_Mal_Detection
 {
     meta:
         author = "Ibrahim Ayyad"
@@ -16,5 +16,6 @@ rule Mariachi_Malware_Detection
     condition:
         uint16(0) == 0x5A4D and
         4 of ($s*) and
-        filesize < 50MB
+        filesize < 100KB
 }
+
